@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<meta name="description" content="המדריך החינמי שעזר ל734 משפחות לקבל אישור משכנתא בלי הפתעות. 6 הטעויות שיכולות להעיף לך את אישור המשכנתא וכיצד להימנע מהן." />
+<meta property="og:title" content="6 טעויות קטלניות שיכולות להעיף לך את אישור המשכנתא | צמד ברזל" />
+<meta property="og:description" content="המדריך החינמי שעזר ל734 משפחות לקבל אישור משכנתא בלי הפתעות." />
+<meta property="og:type" content="website" />
+<title>6 טעויות שיכולות להעיף לך את אישור המשכנתא | צמד ברזל</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --navy: #0a1f3d;
+    --navy-dark: #061328;
+    --navy-light: #14305c;
+    --gold: #b08456;
+    --gold-light: #d4a574;
+    --gold-dark: #8a6440;
+    --cream: #faf8f4;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --text-light: #4a4a4a;
+    --danger: #c53030;
+    --success: #2f855a;
+    --border: rgba(176, 132, 86, 0.25);
+    --shadow-sm: 0 4px 12px rgba(10, 31, 61, 0.08);
+    --shadow-md: 0 10px 30px rgba(10, 31, 61, 0.12);
+    --shadow-lg: 0 25px 60px rgba(10, 31, 61, 0.18);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Heebo', 'Assistant', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ========== TIMER BAR ========== */
+  .timer-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(90deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-dark) 100%);
+    color: var(--white);
+    padding: 12px 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    border-bottom: 2px solid var(--gold);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .timer-bar .timer-flex {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .timer-icon {
+    display: inline-block;
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+  .timer-display {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 6px;
+    font-variant-numeric: tabular-nums;
+    min-width: 70px;
+    font-size: 16px;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+
+  /* ========== HERO ========== */
+  .hero {
+    background:
+      radial-gradient(ellipse at top right, rgba(176, 132, 86, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at bottom left, rgba(176, 132, 86, 0.10) 0%, transparent 50%),
+      linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: var(--white);
+    padding: 50px 0 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .logo-wrap img {
+    height: 110px;
+    width: auto;
+  }
+  .hero-logo-float {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    z-index: 3;
+  }
+  .hero-logo-float img {
+    height: 120px;
+    width: auto;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
+  }
+  @media (max-width: 700px) {
+    .hero-logo-float { top: 16px; right: 16px; }
+    .hero-logo-float img { height: 80px; }
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(176, 132, 86, 0.18);
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+  }
+  .badge::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 var(--gold);
+    animation: pulse-dot 2s infinite;
+  }
+  @keyframes pulse-dot {
+    0% { box-shadow: 0 0 0 0 rgba(176, 132, 86, 0.6); }
+    70% { box-shadow: 0 0 0 12px rgba(176, 132, 86, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(176, 132, 86, 0); }
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 4.5vw, 48px);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
+  }
+  .hero h1 .highlight {
+    color: var(--gold-light);
+  }
+
+  .hero p.lead {
+    font-size: clamp(16px, 1.6vw, 19px);
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 30px;
+    line-height: 1.65;
+    max-width: 580px;
+  }
+
+  .hero-bullets {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+  .hero-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: rgba(255,255,255,0.92);
+  }
+  .hero-bullets li .check {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+  .hero-bullets li .check svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .btn-primary-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--navy-dark);
+    font-weight: 800;
+    font-size: 17px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(176, 132, 86, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(176, 132, 86, 0.5);
+  }
+
+  .social-proof-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+  }
+  .stars { color: var(--gold-light); letter-spacing: 2px; font-size: 16px; }
+
+  /* ========== FORM CARD ========== */
+  .form-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 36px 32px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    border: 1px solid var(--border);
+  }
+  .form-card::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-weight: 800;
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+  }
+  .form-card[data-tag]::before {
+    content: attr(data-tag);
+  }
+
+  .form-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .form-subtitle {
+    font-size: 15px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-family: inherit;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fafafa;
+    transition: border-color 0.2s, background 0.2s;
+    direction: rtl;
+  }
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(176, 132, 86, 0.12);
+  }
+  .form-group input.error {
+    border-color: var(--danger);
+    background: #fff5f5;
+  }
+  .form-group .error-msg {
+    color: var(--danger);
+    font-size: 13px;
+    margin-top: 4px;
+    display: none;
+  }
+  .form-group.has-error .error-msg {
+    display: block;
+  }
+
+  .btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 18px;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 8px;
+    box-shadow: 0 8px 24px rgba(176, 132, 86, 0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(176, 132, 86, 0.5);
+  }
+  .btn-submit:active { transform: translateY(0); }
+  .btn-submit:disabled { opacity: 0.6; cursor: wait; }
+
+  .form-footnote {
+    font-size: 13px;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 14px;
+    line-height: 1.5;
+  }
+  .form-footnote svg {
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+
+  /* ========== SECTIONS ========== */
+  section { padding: 80px 0; }
+  .section-eyebrow {
+    display: inline-block;
+    color: var(--gold-dark);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .section-lead {
+    font-size: 18px;
+    color: var(--text-light);
+    max-width: 720px;
+    line-height: 1.7;
+  }
+  .section-head {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .section-head .section-lead { margin: 0 auto; }
+
+  /* ========== PAIN SECTION ========== */
+  .pain-section {
+    background: var(--white);
+    position: relative;
+  }
+  .pain-quote {
+    background: linear-gradient(135deg, var(--cream) 0%, #f3ede0 100%);
+    border-right: 5px solid var(--gold);
+    padding: 32px 36px;
+    border-radius: 14px;
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--text);
+    max-width: 880px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+  }
+  .pain-quote strong { color: var(--navy); font-weight: 700; }
+  .pain-quote .danger-text { color: var(--danger); font-weight: 700; }
+
+  /* ========== WHAT'S INSIDE ========== */
+  .inside-section {
+    background: linear-gradient(180deg, var(--cream) 0%, #f3ede0 100%);
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+  }
+  .feature {
+    background: var(--white);
+    padding: 28px 24px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .feature:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+  .feature .num {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    font-size: 56px;
+    font-weight: 900;
+    color: rgba(176, 132, 86, 0.12);
+    line-height: 1;
+  }
+  .feature .icon-box {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 16px rgba(176, 132, 86, 0.3);
+  }
+  .feature h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+  .feature p {
+    font-size: 15px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  /* ========== SOCIAL PROOF ========== */
+  .proof-section {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .proof-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(176, 132, 86, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 50%, rgba(176, 132, 86, 0.15) 0%, transparent 40%);
+  }
+  .proof-content { position: relative; z-index: 1; }
+  .big-number {
+    font-size: clamp(72px, 12vw, 130px);
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: -2px;
+    text-shadow: 0 4px 30px rgba(176, 132, 86, 0.4);
+  }
+  .proof-section h2 {
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .proof-section p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    max-width: 680px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+  }
+
+  /* ========== RULES SECTION ========== */
+  .rules-section { background: var(--white); }
+  .rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 36px;
+  }
+  .rule-card {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: var(--white);
+    padding: 32px 28px;
+    border-radius: 14px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s;
+  }
+  .rule-card:hover { transform: translateY(-4px); }
+  .rule-card::before {
+    content: attr(data-num);
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    font-size: 80px;
+    font-weight: 900;
+    color: var(--gold);
+    opacity: 0.25;
+    line-height: 1;
+  }
+  .rule-card h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--gold-light);
+    position: relative;
+  }
+  .rule-card p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.85);
+    position: relative;
+  }
+
+  /* ========== FINAL CTA ========== */
+  .final-cta {
+    background:
+      radial-gradient(ellipse at center, rgba(176, 132, 86, 0.18) 0%, transparent 60%),
+      linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 0;
+  }
+  .final-cta h2 {
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 900;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .final-cta h2 .highlight {
+    color: var(--gold-light);
+  }
+  .final-cta p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+  .final-cta .btn-primary-hero { font-size: 19px; padding: 18px 40px; }
+  .final-cta .form-mini-note {
+    margin-top: 18px;
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: var(--navy-dark);
+    color: rgba(255,255,255,0.7);
+    padding: 32px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(176, 132, 86, 0.2);
+  }
+  footer .logo-wrap { justify-content: center; margin-bottom: 14px; }
+  footer .logo-wrap img { height: 50px; }
+  footer p { line-height: 1.7; }
+  footer a { color: var(--gold-light); text-decoration: none; }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero { padding: 36px 0 50px; }
+    section { padding: 60px 0; }
+    .pain-quote { padding: 24px 22px; font-size: 17px; }
+    .form-card { padding: 28px 22px; }
+    .logo-wrap img { height: 56px; }
+  }
+  @media (max-width: 480px) {
+    .container { padding: 0 18px; }
+    .timer-bar { font-size: 13px; padding: 10px 12px; }
+    .timer-display { font-size: 14px; padding: 3px 10px; min-width: 60px; }
+    .hero h1 { font-size: 28px; }
+    .hero p.lead { font-size: 16px; }
+    .hero-bullets li { font-size: 15px; }
+    .btn-primary-hero { font-size: 16px; padding: 14px 24px; width: 100%; justify-content: center; }
+    .form-title { font-size: 20px; }
+    .feature { padding: 24px 20px; }
+  }
+
+  /* fade-in on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== STICKY TIMER ========== -->
+<div class="timer-bar" role="status" aria-live="polite">
+  <span class="timer-flex">
+    <span class="timer-icon">⏳</span>
+    <span>נשארו לך</span>
+    <span class="timer-display" id="timer">04:00</span>
+    <span>לגישה מלאה למסמך החינמי</span>
+  </span>
+</div>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="hero-logo-float">
+    <img src="assets/logo-gold.png" alt="צמד ברזל יזמות ונדל״ן" />
+  </div>
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Right side (RTL): copy -->
+      <div>
+        <div class="badge">מדריך חינמי | להורדה מיידית</div>
+
+        <h1>
+          6 טעויות קטלניות שיכולות
+          <span class="highlight">להעיף לך את אישור המשכנתא</span>
+          ברגע האחרון
+        </h1>
+
+        <ul class="hero-bullets">
+          <li>
+            <span class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0a1f3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>6 ה"מוקשים" שהבנק בודק עליך, ואיך לעקוף כל אחד מהם</span>
+          </li>
+          <li>
+            <span class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0a1f3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>3 חוקי הברזל שיגרמו לבנק להגיד לך "כן" בלי שאלות</span>
+          </li>
+          <li>
+            <span class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0a1f3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>איך הבנק באמת מחשב את כושר ההחזר שלך (הנוסחה הסודית)</span>
+          </li>
+        </ul>
+
+        <div class="hero-cta-row">
+          <a href="#form" class="btn-primary-hero">
+            שלחו לי את המדריך החינמי
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          </a>
+          <div class="social-proof-mini">
+            <span class="stars">★★★★★</span>
+            <span>734 משפחות כבר הורידו</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left side (RTL): form -->
+      <div id="form">
+        <div class="form-card" data-tag="חינם · 100%">
+          <h2 class="form-title">קבלו את המדריך<br/>ישירות למייל</h2>
+          <p class="form-subtitle">השאירו פרטים והמדריך יישלח אליכם תוך דקה</p>
+
+          <form id="leadForm" novalidate>
+            <div class="form-group" id="g-name">
+              <label for="fullname">שם מלא</label>
+              <input type="text" id="fullname" name="fullname" required autocomplete="name" placeholder="ישראל ישראלי" />
+              <div class="error-msg">חובה למלא שם מלא</div>
+            </div>
+
+            <div class="form-group" id="g-phone">
+              <label for="phone">טלפון נייד</label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="0501234567" inputmode="numeric" />
+              <div class="error-msg">מספר טלפון לא תקין</div>
+            </div>
+
+            <div class="form-group" id="g-email">
+              <label for="email">כתובת מייל</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com" inputmode="email" />
+              <div class="error-msg">כתובת מייל לא תקינה</div>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span>שלחו לי את המדריך החינמי</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            </button>
+
+            <p class="form-footnote">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              הפרטים שלך מאובטחים. לא נשלח ספאם, אפשר להסיר בכל עת.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== PAIN SECTION ========== -->
+<section class="pain-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">רגע לפני שאתם חותמים</span>
+      <h2 class="section-title">יש משהו אחד שחייבים שתדעו</h2>
+    </div>
+    <div class="pain-quote reveal">
+      <p style="margin-bottom: 16px;">
+        <strong>הבנק לא רק בודק כמה כסף יש לכם.</strong>
+        הוא בודק <strong>איך אתם מתנהגים איתו.</strong>
+      </p>
+      <p style="margin-bottom: 16px;">
+        מהרגע שהחלטתם לקנות דירה ועד שהכסף עובר למוכר, אתם תחת מעקב.
+        הבנק כמו שופט במבחן התנהגות: כל שינוי פתאומי, קנייה גדולה או הרפתקה כלכלית
+        קטנה עלולים להדליק לו נורות אדומות.
+      </p>
+      <p>
+        <span class="danger-text">טעות אחת קטנה:</span> עסקה של 1,000 ש"ח בתשלומים,
+        שינוי עבודה תמים, מינוס של פעם אחת, וכל החלום של הדירה החדשה יכול להתפוצץ.
+        או לחילופין, <strong>הריבית שלכם תזנק בעשרות אלפי שקלים</strong> לאורך חיי המשכנתא.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SOCIAL PROOF ========== -->
+<section class="proof-section">
+  <div class="container proof-content">
+    <div class="reveal">
+      <span class="section-eyebrow" style="color: var(--gold-light);">מצטרפים לקהילה גדולה</span>
+      <div class="big-number" id="counterAnim">734</div>
+      <h2>משפחות בישראל כבר השתמשו במדריך הזה</h2>
+      <p>
+        ועזר להן להגיע לבנק מוכנות, רגועות ובעמדת כוח, ולקבל אישור משכנתא בלי הפתעות.
+        עכשיו תור שלכם.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="final-cta">
+  <div class="container">
+    <div class="reveal">
+      <h2>אל תיתנו לטעות קטנה<br/><span class="highlight">לפוצץ לכם את הדירה</span></h2>
+      <p>
+        המדריך חינמי לחלוטין, נשלח ישר למייל שלכם, ובתוך 10 דקות תדעו בדיוק
+        מה לעשות (ומה לא) עד שתקבלו את אישור המשכנתא.
+      </p>
+      <a href="#form" class="btn-primary-hero">
+        שלחו לי את המדריך החינמי עכשיו
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      </a>
+      <p class="form-mini-note">100% חינם · ללא התחייבות · נשלח אליכם תוך דקה</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="logo-wrap">
+      <img src="assets/logo-gold.png" alt="צמד ברזל" />
+    </div>
+    <p>
+      © צמד ברזל יזמות ונדל״ן · כל הזכויות שמורות<br/>
+      קהילת המשקיעים והרוכשים המובילה בישראל
+    </p>
+  </div>
+</footer>
+
+<script>
+  // ========== TIMER (4 minutes, psychological only) ==========
+  (function () {
+    var TOTAL_SECONDS = 4 * 60;
+    var STORAGE_KEY = 'tb_timer_start';
+    var startMs = parseInt(sessionStorage.getItem(STORAGE_KEY) || '0', 10);
+    if (!startMs) {
+      startMs = Date.now();
+      sessionStorage.setItem(STORAGE_KEY, String(startMs));
+    }
+
+    var el = document.getElementById('timer');
+
+    function tick() {
+      var elapsed = Math.floor((Date.now() - startMs) / 1000);
+      var remaining = Math.max(0, TOTAL_SECONDS - elapsed);
+      var m = Math.floor(remaining / 60);
+      var s = remaining % 60;
+      el.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+      if (remaining === 0) {
+        el.textContent = '00:00';
+        // psychological only — do NOT block access
+      }
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+  // ========== FORM VALIDATION + SUBMIT ==========
+  (function () {
+    // ===== CRM integration (n8n shared workflow) =====
+    var WEBHOOK_URL = 'https://n8n.srv1270696.hstgr.cloud/webhook/888d530f-3e94-4178-a39a-b9e29694e037';
+    var LEAD_SOURCE = 'אינסטגרם DM';
+    var LEAD_RESPONSIBLE = 'רוסו';
+    var LEAD_LECTURE = '6 טעויות במשכנתא';
+
+    var form = document.getElementById('leadForm');
+    var btn = document.getElementById('submitBtn');
+
+    function setError(groupId, hasError) {
+      var g = document.getElementById(groupId);
+      if (hasError) g.classList.add('has-error');
+      else g.classList.remove('has-error');
+    }
+
+    function validatePhone(v) {
+      var digits = v.replace(/\D/g, '');
+      return digits.length >= 9 && digits.length <= 11;
+    }
+    function validateEmail(v) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    }
+
+    function submitLead(name, phone, email) {
+      var payload = { name: name, phone: phone, email: email, source: LEAD_SOURCE, responsible: LEAD_RESPONSIBLE, lectureName: LEAD_LECTURE };
+      return fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      }).then(function (r) {
+        if (!r.ok) throw new Error('webhook returned ' + r.status);
+      }).catch(function (err) {
+        try {
+          var pending = JSON.parse(localStorage.getItem('tb_leads_pending') || '[]');
+          pending.push(Object.assign({}, payload, { ts: new Date().toISOString(), error: String(err) }));
+          localStorage.setItem('tb_leads_pending', JSON.stringify(pending));
+        } catch (_) {}
+      });
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('fullname').value.trim();
+      var phone = document.getElementById('phone').value.trim();
+      var email = document.getElementById('email').value.trim();
+
+      var nameErr = name.length < 2;
+      var phoneErr = !validatePhone(phone);
+      var emailErr = !validateEmail(email);
+
+      setError('g-name', nameErr);
+      setError('g-phone', phoneErr);
+      setError('g-email', emailErr);
+
+      if (nameErr || phoneErr || emailErr) {
+        if (nameErr) document.getElementById('fullname').focus();
+        else if (phoneErr) document.getElementById('phone').focus();
+        else document.getElementById('email').focus();
+        return;
+      }
+
+      btn.disabled = true;
+      btn.querySelector('span').textContent = 'שולח...';
+
+      submitLead(name, phone, email).finally(function () {
+        window.location.href = 'thank-you.html?name=' + encodeURIComponent(name);
+      });
+    });
+  })();
+
+  // ========== REVEAL ON SCROLL ==========
+  (function () {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  })();
+
+  // ========== COUNTER ANIMATION ==========
+  (function () {
+    var el = document.getElementById('counterAnim');
+    if (!el) return;
+    var target = parseInt(el.textContent, 10);
+    var fired = false;
+    function animate() {
+      if (fired) return;
+      fired = true;
+      var start = 0;
+      var duration = 1400;
+      var startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min(1, (ts - startTime) / duration);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(start + (target - start) * eased);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(step);
+    }
+    var io2 = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) animate(); });
+    }, { threshold: 0.3 });
+    io2.observe(el);
+  })();
+</script>
+
+</body>
+</html>
