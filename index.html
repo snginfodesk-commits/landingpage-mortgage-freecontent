@@ -869,8 +869,9 @@
   (function () {
     // ===== CRM integration (n8n shared workflow) =====
     var WEBHOOK_URL = 'https://n8n.srv1270696.hstgr.cloud/webhook/888d530f-3e94-4178-a39a-b9e29694e037';
-    var LEAD_SOURCE = 'דף נחיתה - 6 טעויות במשכנתא';
+    var LEAD_SOURCE = 'אינסטגרם DM';
     var LEAD_RESPONSIBLE = 'רוסו';
+    var LEAD_LECTURE = '6 טעויות במשכנתא';
 
     var form = document.getElementById('leadForm');
     var btn = document.getElementById('submitBtn');
@@ -890,7 +891,7 @@
     }
 
     function submitLead(name, phone, email) {
-      var payload = { name: name, phone: phone, email: email, source: LEAD_SOURCE, responsible: LEAD_RESPONSIBLE };
+      var payload = { name: name, phone: phone, email: email, source: LEAD_SOURCE, responsible: LEAD_RESPONSIBLE, lectureName: LEAD_LECTURE };
       return fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
