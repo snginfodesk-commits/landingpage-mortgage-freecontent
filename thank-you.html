@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex" />
+<title>תודה! המדריך בדרך אליך | צמד ברזל</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --navy: #0a1f3d;
+    --navy-dark: #061328;
+    --gold: #b08456;
+    --gold-light: #d4a574;
+    --gold-dark: #8a6440;
+    --cream: #faf8f4;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --text-light: #4a4a4a;
+    --whatsapp: #25D366;
+    --whatsapp-dark: #128C7E;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Heebo', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background:
+      radial-gradient(ellipse at top, rgba(176, 132, 86, 0.18) 0%, transparent 60%),
+      linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+  }
+
+  .card {
+    background: var(--white);
+    width: 100%;
+    max-width: 640px;
+    border-radius: 20px;
+    padding: 48px 44px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: rise 0.6s ease-out;
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-dark));
+  }
+
+  .logo {
+    height: 70px;
+    width: auto;
+    margin: 0 auto 24px;
+    display: block;
+  }
+
+  .check-circle {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 30px rgba(176, 132, 86, 0.35);
+    animation: bounceIn 0.7s 0.2s both cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes bounceIn {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+  .check-circle svg {
+    width: 50px;
+    height: 50px;
+    stroke: var(--white);
+    stroke-width: 3;
+    animation: drawCheck 0.5s 0.6s both ease-out;
+  }
+  @keyframes drawCheck {
+    from { stroke-dasharray: 50; stroke-dashoffset: 50; }
+    to { stroke-dasharray: 50; stroke-dashoffset: 0; }
+  }
+
+  h1 {
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 12px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+  h1 .name {
+    color: var(--gold-dark);
+  }
+
+  .subtitle {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 28px;
+    line-height: 1.65;
+  }
+  .subtitle strong { color: var(--navy); }
+
+  .info-box {
+    background: linear-gradient(135deg, var(--cream) 0%, #f3ede0 100%);
+    border-right: 4px solid var(--gold);
+    padding: 18px 22px;
+    border-radius: 12px;
+    text-align: right;
+    margin-bottom: 32px;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .info-box strong { color: var(--navy); }
+  .info-box svg {
+    color: var(--gold-dark);
+    vertical-align: middle;
+    margin-left: 6px;
+  }
+
+  /* ========== WHATSAPP CTA ========== */
+  .whatsapp-section {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: var(--white);
+    padding: 32px 28px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .whatsapp-section::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(37, 211, 102, 0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .whatsapp-section h2 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--gold-light);
+    position: relative;
+  }
+  .whatsapp-section p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 22px;
+    line-height: 1.7;
+    position: relative;
+  }
+  .perks {
+    list-style: none;
+    text-align: right;
+    margin: 0 auto 22px;
+    max-width: 420px;
+    position: relative;
+  }
+  .perks li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14.5px;
+    color: rgba(255,255,255,0.92);
+  }
+  .perks li::before {
+    content: '✓';
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    margin-top: 1px;
+  }
+
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--whatsapp);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 18px;
+    padding: 16px 36px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    position: relative;
+  }
+  .btn-whatsapp:hover {
+    transform: translateY(-2px);
+    background: var(--whatsapp-dark);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.55);
+  }
+  .btn-whatsapp svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ========== STEPS ========== */
+  .steps-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .step {
+    background: var(--cream);
+    padding: 16px 12px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(176, 132, 86, 0.2);
+  }
+  .step-num {
+    width: 32px;
+    height: 32px;
+    background: var(--gold);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    margin: 0 auto 10px;
+    font-size: 15px;
+  }
+  .step-text {
+    font-size: 13.5px;
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 600px) {
+    .card { padding: 36px 24px; }
+    h1 { font-size: 26px; }
+    .subtitle { font-size: 16px; }
+    .whatsapp-section { padding: 26px 20px; }
+    .whatsapp-section h2 { font-size: 20px; }
+    .btn-whatsapp { font-size: 16px; padding: 14px 28px; width: 100%; justify-content: center; }
+    .steps { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="card">
+
+    <img src="assets/logo-gold.png" alt="צמד ברזל" class="logo" />
+
+    <div class="check-circle">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+
+    <h1>תודה<span id="userName"></span>! המדריך בדרך אליך</h1>
+    <p class="subtitle">
+      שלחנו לך עכשיו את <strong>המדריך החינמי</strong> ישירות למייל.
+      תוך כמה דקות הוא יחכה לך בתיבה.
+    </p>
+
+    <div class="info-box">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <strong>חשוב:</strong> אם המייל לא הגיע תוך 5 דקות, תבדקו את תיקיית הספאם / קידום מכירות.
+    </div>
+
+    <!-- ========== WHATSAPP CTA ========== -->
+    <div class="whatsapp-section">
+      <h2>אבל רגע, יש עוד משהו...</h2>
+      <p>
+        אם אתם רציניים לגבי השקעה בנדל״ן, אתם <strong style="color: var(--gold-light);">חייבים להצטרף לקהילה שלנו בווצאפ.</strong>
+      </p>
+
+      <ul class="perks">
+        <li>עדכונים שוטפים על השוק והמשכנתאות</li>
+        <li>פרסום עסקאות "מתחת לראדר" שלא מגיעות לציבור</li>
+        <li>וובינרים והרצאות חינמיות עם מומחים</li>
+        <li>טיפים יומיים בדיוק כמו במדריך הזה</li>
+      </ul>
+
+      <a href="https://chat.whatsapp.com/CZxdM5QHuOhI8iyQMgCEVn"
+         target="_blank"
+         rel="noopener"
+         class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        <span>להצטרפות מיידית לקהילה</span>
+      </a>
+    </div>
+
+    <!-- ========== NEXT STEPS ========== -->
+    <h3 class="steps-title">מה עכשיו?</h3>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">תפתחו את המדריך<br/>במייל</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">תצטרפו<br/>לקהילה בווצאפ</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">תיישמו<br/>ותתקדמו לדירה</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // Personalize the headline with the user's first name (if passed via URL)
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var name = params.get('name');
+    if (name) {
+      var firstName = name.trim().split(' ')[0];
+      var safe = firstName.replace(/[<>"'&]/g, '');
+      if (safe.length > 0) {
+        document.getElementById('userName').textContent = ' ' + safe;
+      }
+    }
+  })();
+
+  // Clear timer session so a returning user starts fresh
+  try { sessionStorage.removeItem('tb_timer_start'); } catch (e) {}
+</script>
+
+</body>
+</html>
