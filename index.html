@@ -157,20 +157,27 @@
     width: auto;
     filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
   }
+
+  /* Mobile-only logo, sits below the form on the navy hero background */
+  .hero-logo-mobile { display: none; }
   @media (max-width: 900px) {
-    /* Convert floating logo to inline centered on mobile/tablet — no overlap with copy */
-    .hero-logo-float {
-      position: static;
-      top: auto;
-      right: auto;
+    /* Hide the floating desktop logo on mobile/tablet — replaced by hero-logo-mobile */
+    .hero-logo-float { display: none; }
+    .hero-logo-mobile {
+      display: block;
       text-align: center;
-      margin: 0 auto 14px;
-      width: 100%;
+      margin-top: 6px;
+      order: 3;
     }
-    .hero-logo-float img { height: 90px; margin: 0 auto; }
+    .hero-logo-mobile img {
+      height: 96px;
+      width: auto;
+      margin: 0 auto;
+      filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.4));
+    }
   }
   @media (max-width: 480px) {
-    .hero-logo-float img { height: 76px; }
+    .hero-logo-mobile img { height: 80px; }
   }
 
   .badge {
@@ -649,9 +656,9 @@
     .form-card { padding: 28px 22px; }
     .logo-wrap img { height: 56px; }
 
-    /* Form-card first, copy second on mobile */
+    /* Mobile order: form first, copy second, logo third (logo order set above) */
+    .hero-grid > #form { order: 1; }
     .hero-grid > div:nth-child(1) { order: 2; }
-    .hero-grid > div:nth-child(2) { order: 1; }
 
     /* Center hero copy block on mobile */
     .hero-grid > div:nth-child(1) { text-align: center; }
@@ -749,6 +756,11 @@
             <span>734 משפחות כבר הורידו</span>
           </div>
         </div>
+      </div>
+
+      <!-- Mobile-only logo (sits below the form on the navy hero background) -->
+      <div class="hero-logo-mobile" aria-hidden="true">
+        <img src="assets/logo-gold.png" alt="צמד ברזל יזמות ונדל״ן" />
       </div>
 
       <!-- Left side (RTL): form -->
