@@ -153,13 +153,24 @@
     z-index: 3;
   }
   .hero-logo-float img {
-    height: 120px;
+    height: 204px;
     width: auto;
     filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
   }
-  @media (max-width: 700px) {
-    .hero-logo-float { top: 16px; right: 16px; }
-    .hero-logo-float img { height: 80px; }
+  @media (max-width: 900px) {
+    /* Convert floating logo to inline centered on mobile/tablet — no overlap with copy */
+    .hero-logo-float {
+      position: static;
+      top: auto;
+      right: auto;
+      text-align: center;
+      margin: 0 auto 14px;
+      width: 100%;
+    }
+    .hero-logo-float img { height: 90px; margin: 0 auto; }
+  }
+  @media (max-width: 480px) {
+    .hero-logo-float img { height: 76px; }
   }
 
   .badge {
@@ -631,20 +642,36 @@
 
   /* ========== RESPONSIVE ========== */
   @media (max-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .hero { padding: 36px 0 50px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+    .hero { padding: 18px 0 50px; }
     section { padding: 60px 0; }
     .pain-quote { padding: 24px 22px; font-size: 17px; }
     .form-card { padding: 28px 22px; }
     .logo-wrap img { height: 56px; }
+
+    /* Form-card first, copy second on mobile */
+    .hero-grid > div:nth-child(1) { order: 2; }
+    .hero-grid > div:nth-child(2) { order: 1; }
+
+    /* Center hero copy block on mobile */
+    .hero-grid > div:nth-child(1) { text-align: center; }
+    .hero p.lead { margin-left: auto; margin-right: auto; }
+    .hero-bullets {
+      display: inline-block;
+      text-align: right;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-cta-row { justify-content: center; }
+    .social-proof-mini { justify-content: center; }
   }
   @media (max-width: 480px) {
     .container { padding: 0 18px; }
     .timer-bar { font-size: 13px; padding: 10px 12px; }
     .timer-display { font-size: 14px; padding: 3px 10px; min-width: 60px; }
-    .hero h1 { font-size: 28px; }
-    .hero p.lead { font-size: 16px; }
-    .hero-bullets li { font-size: 15px; }
+    .hero h1 { font-size: 30px; }
+    .hero p.lead { font-size: 17px; }
+    .hero-bullets li { font-size: 16px; }
     .btn-primary-hero { font-size: 16px; padding: 14px 24px; width: 100%; justify-content: center; }
     .form-title { font-size: 20px; }
     .feature { padding: 24px 20px; }
